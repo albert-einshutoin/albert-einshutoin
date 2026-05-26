@@ -103,7 +103,6 @@ One abstraction can support:
 
 ## 🛡️ Engineering Rules
 
-- No direct merge  
 - Everything is reproducible  
 - Humans define intent, constraints, and structure  
 - Machines execute, verify, and repeat  
