@@ -35,6 +35,14 @@ Rust / TypeScript / Go. Policy-as-code, Docker-first, spec-driven.
 
 ---
 
+## Contribute
+
+| Project | Layer | What |
+|--------|-------|------|
+| [**floci**](https://github.com/floci-io/floci) | Local AWS | RDS persistence and runtime restore |
+
+---
+
 ## Stack
 
 ![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)

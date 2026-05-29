@@ -35,6 +35,14 @@ Rust / TypeScript / Go。ポリシー as code、Docker-first、spec駆動。
 
 ---
 
+## コントリビュート
+
+| プロジェクト | レイヤー | 内容 |
+|--------|-------|------|
+| [**floci**](https://github.com/floci-io/floci) | ローカル AWS | RDS の永続化と runtime 復元 |
+
+---
+
 ## スタック
 
 ![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
