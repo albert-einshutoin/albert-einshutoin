@@ -12,6 +12,18 @@ Rust / TypeScript / Go。ポリシー as code、Docker-first、spec駆動。
 
 ---
 
+## Respect
+
+Respect Albert Einstein.
+
+> "Imagination is more important than knowledge."
+>
+> -- Albert Einstein
+
+`albert-einshutoin` は、その精神への小さなリスペクトとして付けています。
+
+---
+
 ## やっていること
 
 - エッジ / CDN: セキュリティヘッダ、キャッシュポリシー、コスト最適化

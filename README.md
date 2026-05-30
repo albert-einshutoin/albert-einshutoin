@@ -12,6 +12,18 @@ Rust / TypeScript / Go. Policy-as-code, Docker-first, spec-driven.
 
 ---
 
+## Respect
+
+Respect Albert Einstein.
+
+> "Imagination is more important than knowledge."
+>
+> -- Albert Einstein
+
+`albert-einshutoin` is a small homage to that spirit.
+
+---
+
 ## Focus
 
 - Edge / CDN: security headers, cache policy, cost-aware optimization
