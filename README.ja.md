@@ -44,7 +44,7 @@ Respect Albert Einstein.
 | [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) | DX / i18n | リリース済み | Rust + SWC による i18next キー抽出・ローカライズ |
 | [**mockport**](https://github.com/albert-einshutoin/mockport) | テスト | MVP | シークレット不要の Docker-first サービスエミュレータ |
 | [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | PoC | ローカル / CI 向け MQTT / edge-device 契約エミュレータ |
-| [**qzt**](https://github.com/albert-einshutoin/qzt) | Storage / Evidence | In Progress | Seekable, verifiable zstd text container for evidence-addressable AI memory |
+| [**qzt**](https://github.com/albert-einshutoin/qzt) | ストレージ / 証跡 | 開発中 | 証跡アドレス可能な AI メモリのための、シーク可能で検証可能な zstd テキストコンテナ |
 
 ---
 
