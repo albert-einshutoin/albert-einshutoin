@@ -43,8 +43,9 @@ Respect Albert Einstein.
 | [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) | メディア / 性能 | リリース済み | CDN配信ワークロード向け Rust 画像最適化 |
 | [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) | DX / i18n | リリース済み | Rust + SWC による i18next キー抽出・ローカライズ |
 | [**mockport**](https://github.com/albert-einshutoin/mockport) | テスト | MVP | シークレット不要の Docker-first サービスエミュレータ |
-| [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | PoC | ローカル / CI 向け MQTT / edge-device 契約エミュレータ |
-| [**qzt**](https://github.com/albert-einshutoin/qzt) | ストレージ / 証跡 | 開発中 | 証跡アドレス可能な AI メモリのための、シーク可能で検証可能な zstd テキストコンテナ |
+| [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | PoC | ローカル / CI 向け MQTT / edge-device エミュレータ |
+| [**qzt**](https://github.com/albert-einshutoin/qzt) | ストレージ / LLM記憶 | 開発中 | 証跡アドレス可能な AI メモリのための、検索可能で検証可能な zstd 圧縮テキストコンテナ |
+| [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) | SaaS / 拡張機能 | 開発中 | テナント別SaaS拡張を安全・監査可能に実行するCloudflare-native control plane |
 
 ---
 

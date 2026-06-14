@@ -45,6 +45,7 @@ Respect Albert Einstein.
 | [**mockport**](https://github.com/albert-einshutoin/mockport) | Testing | MVP | Docker-first service emulator for integration tests without secrets |
 | [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | Active PoC | MQTT / edge-device contract emulator for local and CI |
 | [**qzt**](https://github.com/albert-einshutoin/qzt) | Storage / Evidence | In Progress | Seekable, verifiable zstd text container for evidence-addressable AI memory |
+| [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) | SaaS / Extensions | In Progress | Cloudflare-native control plane for secure, auditable tenant-specific SaaS extensions |
 
 ---
 
