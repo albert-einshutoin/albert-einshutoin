@@ -95,6 +95,10 @@ AI支援開発を活用し、探索できる領域を広げています。ただ
 
 [![albert-einshutoinのGitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=albert-einshutoin&theme=github-compact&hide_border=true&area=true&radius=8)](https://github.com/albert-einshutoin)
 
+<p align="center">
+  <img src="./profile-summary-card-output/transparent/1-repos-per-language.svg" alt="公開リポジトリで使用している言語" width="340">
+</p>
+
 ---
 
 ## 連絡先
