@@ -2,88 +2,102 @@
 
 **English** | [日本語](./README.ja.md)
 
-OSS for edge security, CDN policy, CI emulation, and test infra.  
-Rust / TypeScript / Go. Policy-as-code, Docker-first, spec-driven.
+### Backend engineer turning production problems and ideas about what comes next into OSS.
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=albert-einshutoin&label=Views&color=0e75b6&style=flat" />
-  <img src="https://img.shields.io/github/followers/albert-einshutoin?label=Followers&logo=github&style=flat" />
-</p>
+I follow problems, not layers. If an idea could move technology forward and I can test it in code, I want to build it.
+
+AI-assisted development lets me explore a wider range of systems. The goal is not just to generate code, but to understand what runs beneath it. I publish what I learn as open-source tools, and I want to carry the same ideas into web services and apps so more people can access emerging technology.
+
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 
 ---
 
-## Respect
-
-Respect Albert Einstein.
+## Name and inspiration
 
 > "Imagination is more important than knowledge."
 >
-> -- Albert Einstein
+> — Albert Einstein
 
-`albert-einshutoin` is a small homage to that spirit.
-
----
-
-## Focus
-
-- Edge / CDN: security headers, cache policy, cost-aware optimization
-- CI / QA: service emulators, contract tests, secret-free integration runs
-- Media / i18n: image pipelines, localization tooling
-- Low-level libs and CLIs that other apps import or shell out to
-- End-user-facing services
+`albert-einshutoin` is a small homage to Albert Einstein, the person I respect most. For me, imagination is the starting point; engineering is how I test it in the real world.
 
 ---
 
-## Repos
+## How I build
 
-| Project | Layer | Status | What it does |
-|--------|-------|--------|--------------|
-| [**cdn-security-framework**](https://github.com/albert-einshutoin/cdn-security-framework) | Edge / Security | Released | Policy-driven CDN security for CloudFront and Cloudflare |
-| [**quant-cache**](https://github.com/albert-einshutoin/quant-cache) | CDN / Optimization | Active | Cache policy evaluation via economic objective functions |
-| [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) | Media / Performance | Released | Rust image optimization for CDN-heavy workloads |
-| [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) | DX / i18n | Released | Rust + SWC i18next key extraction and localization workflow |
-| [**mockport**](https://github.com/albert-einshutoin/mockport) | Testing | MVP | Docker-first service emulator for integration tests without secrets |
-| [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | Active PoC | MQTT / edge-device contract emulator for local and CI |
-| [**qzt**](https://github.com/albert-einshutoin/qzt) | Storage / Evidence | In Progress | Seekable, verifiable zstd text container for evidence-addressable AI memory |
-| [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) | SaaS / Extensions | In Progress | Cloudflare-native control plane for secure, auditable tenant-specific SaaS extensions |
+1. Start with a concrete problem from production or development.
+2. Question whether the problem is being solved at the right layer and whether the current abstraction still makes sense.
+3. Form a technical hypothesis and test it in working software.
+4. Publish the result as OSS so others can inspect, challenge, and extend it.
+
+I am currently exploring programmable edge computing, native performance, safe local and CI infrastructure, and AI memory systems. These are areas I am exploring now, not boundaries around what I build.
 
 ---
 
-## Contribute
+## Selected work
 
-| Project | Layer | What |
-|--------|-------|------|
-| [**floci**](https://github.com/floci-io/floci) | Local AWS | RDS persistence and runtime restore |
+### Programmable edge computing
+
+- [**cdn-security-framework**](https://github.com/albert-einshutoin/cdn-security-framework) — `Released` `JavaScript`
+
+  Born from production work with WAFs, application-level rate limits, and Nginx. It explores whether layered filtering at the edge can separate attack traffic from legitimate requests more clearly before they reach the backend.
+
+- [**quant-cache**](https://github.com/albert-einshutoin/quant-cache) — `Released` `Rust`
+
+  Built to explore whether quantum-inspired optimization can improve CDN cache-policy selection and resource allocation.
+
+- [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) — `In progress` `TypeScript`
+
+  Uses Cloudflare's isolated execution environment to explore whether tenant-specific business logic can run safely and remain auditable inside a SaaS control plane.
+
+### Native performance
+
+- [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) — `Released` `Rust` `Node.js`
+
+  Started after I chose `sharp` for image processing in a production Node.js system. Maturity and performance explain why an engine becomes the default—but could a new engine earn its place through different strengths? Image processing was a new domain for me, so I used AI-assisted development to explore bounded memory, secure defaults, and smaller output sizes in a Rust-powered Node.js engine.
+
+- [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) — `Released` `Rust` `N-API`
+
+  Started from wanting the fastest possible i18n checks in CI. While learning how Rust and Node.js work together, I found N-API and used it to accelerate key extraction without changing the surrounding Node.js workflow.
+
+### Safe local and CI infrastructure
+
+- [**mockport**](https://github.com/albert-einshutoin/mockport) — `MVP` `Go` `Docker`
+
+  Started with a practical question in AI-assisted development: how can agents run integration tests without reading `.env` or receiving production-like secrets? Instead of only changing how credentials are passed around, `mockport` emulates dependencies locally so tests can switch endpoints and environment variables.
+
+- [**roomci**](https://github.com/albert-einshutoin/roomci) — `Experimental` `Rust` `MQTT`
+
+  Grew from contributing to `floci` and building `mockport`. It explores whether local emulation and contract testing can reproduce IoT and smart-home failures in CI instead of waiting for them to happen in the field.
+
+### AI memory systems
+
+- [**qzt**](https://github.com/albert-einshutoin/qzt) — `In progress` `Rust` `zstd`
+
+  Focuses on a different AI bottleneck: not only model capability, but how long-running human–AI context is preserved and retrieved. The goal is to keep the full conversation history in a compressed, seekable evidence container, then let a higher-level MemoryPager recover the right information and historical context when needed.
 
 ---
 
-## Stack
+## Upstream contributions
 
-![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![](https://img.shields.io/badge/OpenAPI-Spec%20Driven-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white)
-![](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![](https://img.shields.io/badge/Amazon%20CloudFront-CDN-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![](https://img.shields.io/badge/GitHub%20Actions-CI-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+- [**floci**](https://github.com/floci-io/floci) — Local AWS RDS persistence and runtime restoration
 
-Targets: CloudFront, Cloudflare Workers, GitHub Actions, local Docker.
+  Merged: [#945](https://github.com/floci-io/floci/pull/945), [#1014](https://github.com/floci-io/floci/pull/1014), [#1071](https://github.com/floci-io/floci/pull/1071)
 
 ---
 
 ## Activity
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=albert-einshutoin&theme=onedark" width="100%" />
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=albert-einshutoin&theme=onedark" width="49%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=albert-einshutoin&theme=onedark" width="49%" />
-</div>
+[![GitHub activity graph for albert-einshutoin](https://github-readme-activity-graph.vercel.app/graph?username=albert-einshutoin&theme=github-compact&hide_border=true&area=true&radius=8)](https://github.com/albert-einshutoin)
 
 ---
 
 ## Contact
 
-- X: https://x.com/forte_grapher
-- Note: https://note.com/albert_forte
+- [X / @forte_grapher](https://x.com/forte_grapher)
+- [Note / albert_forte](https://note.com/albert_forte)

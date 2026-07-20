@@ -2,88 +2,102 @@
 
 [English](./README.md) | **日本語**
 
-エッジセキュリティ、CDNポリシー、CIエミュレーション、テスト基盤のOSS。  
-Rust / TypeScript / Go。ポリシー as code、Docker-first、spec駆動。
+### 実務で見つけた課題と、将来を見据えた技術仮説をOSSとして形にするバックエンドエンジニアです。
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=albert-einshutoin&label=Views&color=0e75b6&style=flat" />
-  <img src="https://img.shields.io/github/followers/albert-einshutoin?label=Followers&logo=github&style=flat" />
-</p>
+特定の技術レイヤーにこだわらず、解くべき問題を追いかけています。技術を前へ進める可能性があり、その仮説をコードで検証できるなら、まず作って確かめます。
+
+AI支援開発を活用し、探索できる領域を広げています。ただコードを生成するのではなく、その下で動く仕組みまで理解すること。検証の成果をOSSやWebサービス、アプリとして公開し、より多くの人が使い、確かめ、発展させられる形にすることを目指しています。
+
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 
 ---
 
-## Respect
-
-Respect Albert Einstein.
+## 名前と原点
 
 > "Imagination is more important than knowledge."
 >
-> -- Albert Einstein
+> — Albert Einstein
 
-`albert-einshutoin` は、その精神への小さなリスペクトとして付けています。
-
----
-
-## やっていること
-
-- エッジ / CDN: セキュリティヘッダ、キャッシュポリシー、コスト最適化
-- CI / QA: サービスエミュレータ、契約テスト、シークレットなし結合テスト
-- メディア / i18n: 画像パイプライン、ローカライズツール
-- アプリが import したり shell したりする低レイヤの lib / CLI
-- エンドユーザー向けサービス
+`albert-einshutoin` は、最も尊敬するAlbert Einsteinへの小さなオマージュです。自分にとって想像力は出発点であり、エンジニアリングはそれを現実の中で確かめるための手段です。
 
 ---
 
-## リポジトリ
+## 開発で大切にしていること
 
-| プロジェクト | レイヤー | 状態 | 概要 |
-|--------|-------|--------|--------------|
-| [**cdn-security-framework**](https://github.com/albert-einshutoin/cdn-security-framework) | エッジ / セキュリティ | リリース済み | CloudFront / Cloudflare 向けポリシー駆動CDNセキュリティ |
-| [**quant-cache**](https://github.com/albert-einshutoin/quant-cache) | CDN / 最適化 | 開発中 | 経済目的関数によるキャッシュポリシー評価 |
-| [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) | メディア / 性能 | リリース済み | CDN配信ワークロード向け Rust 画像最適化 |
-| [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) | DX / i18n | リリース済み | Rust + SWC による i18next キー抽出・ローカライズ |
-| [**mockport**](https://github.com/albert-einshutoin/mockport) | テスト | MVP | シークレット不要の Docker-first サービスエミュレータ |
-| [**roomci**](https://github.com/albert-einshutoin/roomci) | IoT / QA | PoC | ローカル / CI 向け MQTT / edge-device エミュレータ |
-| [**qzt**](https://github.com/albert-einshutoin/qzt) | ストレージ / LLM記憶 | 開発中 | 証跡アドレス可能な AI メモリのための、検索可能で検証可能な zstd 圧縮テキストコンテナ |
-| [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) | SaaS / 拡張機能 | 開発中 | テナント別SaaS拡張を安全・監査可能に実行するCloudflare-native control plane |
+1. 実務や開発で出会った、具体的な問題から始める。
+2. その問題を解く場所や、現在の抽象化が本当に適切なのかを問い直す。
+3. 技術的な仮説を立て、動くソフトウェアで確かめる。
+4. 結果をOSSとして公開し、他の人も検証し、議論し、発展させられるようにする。
+
+現在は、Programmable Edge、Native Performance、安全なローカル・CI基盤、AI Memory Systemsに取り組んでいます。いずれも今の探究テーマであり、自分の活動領域を限定するものではありません。
 
 ---
 
-## コントリビュート
+## 主なプロジェクト
 
-| プロジェクト | レイヤー | 内容 |
-|--------|-------|------|
-| [**floci**](https://github.com/floci-io/floci) | ローカル AWS | RDS の永続化と runtime 復元 |
+### Programmable Edge
+
+- [**cdn-security-framework**](https://github.com/albert-einshutoin/cdn-security-framework) — `リリース済み` `JavaScript`
+
+  実務でWAFの導入、アプリケーション層でのレート制限、Nginxによる制御を経験したことが出発点です。アクセスをEdgeで多層的に精査し、Backendへ届く時点で攻撃と通常アクセスをより明確に分けられないか検証しています。
+
+- [**quant-cache**](https://github.com/albert-einshutoin/quant-cache) — `リリース済み` `Rust`
+
+  キャッシュ効率を最大化するために、量子コンピューティングの考え方を取り入れたパッケージです。量子インスパイアド最適化によって、CDNのキャッシュポリシー選択とリソース配分を改善できるか検証しています。
+
+- [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) — `開発中` `TypeScript`
+
+  Cloudflareの分離実行環境をSaaSに取り入れ、顧客ごとに異なるビジネスロジックを安全かつ監査可能な形で実行できるかを探っています。
+
+### Native Performance
+
+- [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) — `リリース済み` `Rust` `Node.js`
+
+  実務でNode.jsの画像処理に`sharp`を選んだことが出発点です。長年の実績と性能でデファクトになっているなら、異なる強みを持つ選択肢を作れないかと考えました。画像処理は未経験の領域でしたが、AI支援を活用し、メモリ使用量の制御、安全なデフォルト、出力サイズの削減に取り組んでいます。
+
+- [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) — `リリース済み` `Rust` `N-API`
+
+  i18n関連のCIをできるだけ速くしたい、という思いから生まれました。RustとNode.jsを学ぶ中で知ったN-APIを使い、Node.jsのワークフローを保ったままキー抽出を高速化しています。
+
+### 安全なローカル・CI基盤
+
+- [**mockport**](https://github.com/albert-einshutoin/mockport) — `MVP` `Go` `Docker`
+
+  AI支援開発で、AIエージェントに`.env`を読ませず、安全に結合テストを実行するにはどうすればよいか、という問題から始まりました。Secretの渡し方を工夫するだけでなく、依存サービスそのものをローカルに再現し、接続先と環境変数の切り替えだけでテストできる設計を目指しています。
+
+- [**roomci**](https://github.com/albert-einshutoin/roomci) — `実験中` `Rust` `MQTT`
+
+  `floci`へのコントリビュートと`mockport`の開発から得た発想を、IoTやSmart Homeの開発へ広げています。ローカルエミュレーションと契約テストによって、現場でしか起きない障害をCI上で再現できるか検証しています。
+
+### AI Memory Systems
+
+- [**qzt**](https://github.com/albert-einshutoin/qzt) — `開発中` `Rust` `zstd`
+
+  AIモデル自体の能力をさらに高めるだけでなく、人間とAIの長期的な会話コンテキストをどう残し、必要なときに取り出すかという課題に取り組んでいます。会話の全履歴を捨てずに圧縮・検索できるようにし、上位のMemoryPagerと組み合わせることで、必要な情報や過去の経緯を適切に取り出せる記憶基盤を目指しています。
 
 ---
 
-## スタック
+## 外部OSSへの貢献
 
-![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![](https://img.shields.io/badge/OpenAPI-Spec%20Driven-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white)
-![](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![](https://img.shields.io/badge/Amazon%20CloudFront-CDN-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![](https://img.shields.io/badge/GitHub%20Actions-CI-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+- [**floci**](https://github.com/floci-io/floci) — ローカルAWS環境におけるRDSの永続化とランタイム状態の復元
 
-デプロイ先: CloudFront, Cloudflare Workers, GitHub Actions, ローカル Docker。
+  マージ済み: [#945](https://github.com/floci-io/floci/pull/945)、[#1014](https://github.com/floci-io/floci/pull/1014)、[#1071](https://github.com/floci-io/floci/pull/1071)
 
 ---
 
 ## アクティビティ
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=albert-einshutoin&theme=onedark" width="100%" />
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=albert-einshutoin&theme=onedark" width="49%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=albert-einshutoin&theme=onedark" width="49%" />
-</div>
+[![albert-einshutoinのGitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=albert-einshutoin&theme=github-compact&hide_border=true&area=true&radius=8)](https://github.com/albert-einshutoin)
 
 ---
 
-## SNS
+## 連絡先
 
-- X: https://x.com/forte_grapher
-- Note: https://note.com/albert_forte
+- [X / @forte_grapher](https://x.com/forte_grapher)
+- [Note / albert_forte](https://note.com/albert_forte)
