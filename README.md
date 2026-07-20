@@ -45,25 +45,25 @@ I am currently exploring programmable edge computing, native performance, safe l
 
 - [**cdn-security-framework**](https://github.com/albert-einshutoin/cdn-security-framework) — `Released` `JavaScript`
 
-  Born from production work with WAFs, application-level rate limits, and Nginx. It explores whether layered filtering at the edge can separate attack traffic from legitimate requests more clearly before they reach the backend.
+  Born from production work with WAFs, application-level rate limits, and Nginx. It explores how lightweight filtering in Edge Functions and protection in a WAF can work as separate layers to reduce obvious anomalies before traffic reaches the backend.
 
 - [**quant-cache**](https://github.com/albert-einshutoin/quant-cache) — `Released` `Rust`
 
-  Built to explore whether quantum-inspired optimization can improve CDN cache-policy selection and resource allocation.
+  Built to explore whether offline QUBO and simulated-annealing search can improve CDN cache-policy selection under economic and capacity constraints.
 
 - [**TenantScript**](https://github.com/albert-einshutoin/TenantScript) — `In progress` `TypeScript`
 
-  Uses Cloudflare's isolated execution environment to explore whether tenant-specific business logic can run safely and remain auditable inside a SaaS control plane.
+  Builds a control plane around Cloudflare Workers primitives for tenant-specific plugins, permissions, approvals, versioning, and audit logs. Live validation with Dynamic Workers is still in progress.
 
 ### Native performance
 
 - [**lazy-image**](https://github.com/albert-einshutoin/lazy-image) — `Released` `Rust` `Node.js`
 
-  Started after I chose `sharp` for image processing in a production Node.js system. Maturity and performance explain why an engine becomes the default—but could a new engine earn its place through different strengths? Image processing was a new domain for me, so I used AI-assisted development to explore bounded memory, secure defaults, and smaller output sizes in a Rust-powered Node.js engine.
+  Started after I chose `sharp` for image processing in a production Node.js system. Maturity and performance explain why an engine becomes the default—but could a new engine earn its place through different strengths? Image processing was a new domain for me, so I used AI-assisted development to explore bounded memory, secure defaults, and smaller JPEG outputs in the current reference benchmarks with a Rust-powered Node.js engine.
 
 - [**i18next-turbo**](https://github.com/albert-einshutoin/i18next-turbo) — `Released` `Rust` `N-API`
 
-  Started from wanting the fastest possible i18n checks in CI. While learning how Rust and Node.js work together, I found N-API and used it to accelerate key extraction without changing the surrounding Node.js workflow.
+  Started from wanting the fastest possible i18n checks in CI. Rust and SWC accelerate key extraction, while N-API keeps the native implementation accessible from the existing Node.js workflow.
 
 ### Safe local and CI infrastructure
 
@@ -79,7 +79,7 @@ I am currently exploring programmable edge computing, native performance, safe l
 
 - [**qzt**](https://github.com/albert-einshutoin/qzt) — `In progress` `Rust` `zstd`
 
-  Focuses on a different AI bottleneck: not only model capability, but how long-running human–AI context is preserved and retrieved. The goal is to keep the full conversation history in a compressed, seekable evidence container, then let a higher-level MemoryPager recover the right information and historical context when needed.
+  `qzt` is a queryable zstd text-evidence container with partial retrieval and verified search. I am exploring it as a storage foundation for MemoryPager, a higher-level system for preserving and recovering long-running human–AI context.
 
 ---
 
