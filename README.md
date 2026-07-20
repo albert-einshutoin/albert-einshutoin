@@ -95,6 +95,10 @@ I am currently exploring programmable edge computing, native performance, safe l
 
 [![GitHub activity graph for albert-einshutoin](https://github-readme-activity-graph.vercel.app/graph?username=albert-einshutoin&theme=github-compact&hide_border=true&area=true&radius=8)](https://github.com/albert-einshutoin)
 
+<p align="center">
+  <img src="./profile-summary-card-output/transparent/1-repos-per-language.svg" alt="Languages across public repositories" width="340">
+</p>
+
 ---
 
 ## Contact
